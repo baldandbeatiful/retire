@@ -1,0 +1,412 @@
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img {
+    pointer-events: none;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	overflow: hidden;
+}
+
+main::before {
+  	content: "";
+  	position: absolute;
+	background: url(../img/bg.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 4610px;
+  	background-image: url("../img/bg.jpg");
+  	background-size: cover;
+  	mix-blend-mode: screen;
+  	z-index: -1;
+}
+
+#main-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+nav {
+	position: relative;
+	top: -15px;
+	background: rgba(62, 62, 62, 0.1);
+	backdrop-filter: blur(4.85px);
+	border-radius: 81px;
+	padding-block: 15px;
+	padding-inline: 35px;
+	font-size: 24px;
+}
+
+li {
+	display: inline;
+}
+
+li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.nav-item {
+	margin-inline: 15px;
+}
+
+.separator {
+	color: #fff;
+	font-size: 17px;
+}
+
+.active {
+	color: #2269FF;
+}
+
+#how-to {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 200px;
+}
+
+#title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 64px;
+	line-height: 77px;
+	letter-spacing: -0.04em;
+	color: #222222;
+}
+
+#title-retire {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#blue-title {
+	color: #2269FF;
+}
+
+#description {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 26px;
+	text-align: center;
+	letter-spacing: -0.04em;
+	margin-top: 15px;
+	width: 600px;
+	color: #222222;
+	opacity: 0.5;
+}
+
+#star1 {
+	position: relative;
+	left: -2px;
+	top: -20px;
+}
+
+#star2 {
+	position: relative;
+	left: 7px;
+	top: 20px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+h2 {
+	position: relative;
+	z-index: 1;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 140px;
+	text-align: center;
+	letter-spacing: 0.01em;
+	color: #2269FF;
+	mix-blend-mode: overlay;
+
+
+}
+
+.row p {
+	font-family: 'Inter'
+	font-style: normal;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 48px;
+	text-align: right;
+	letter-spacing: -0.04em;
+	width: 539px;
+	color: #222222;
+}
+
+.step-text {
+	margin-inline: 60px;
+}
+
+.right-content p {
+	text-align: right;
+}
+
+.left-content p {
+	text-align: left;
+}
+
+.right-content {
+	background-size: cover;
+	position: relative;
+	margin-block: 50px;
+	padding-block: 120px;
+}
+
+.right-content::before {
+	content: "";
+	position: absolute;
+	top: -50px; 
+	right: -120px; 
+	height: 700px; 
+	width: 900px; 
+	background: url(../img/cloud.png) no-repeat;
+	background-size: 90%;
+	mix-blend-mode: screen;
+	z-index: -1;
+	opacity: 0.6;
+}
+
+.left-content {
+	background-size: cover;
+	position: relative;
+	margin-block: 50px;
+	padding-block: 120px;
+}
+
+.left-content::before {
+	content: "";
+	position: absolute;
+	top: -50px; 
+	right: -220px; 
+	height: 700px; 
+	width: 900px; 
+	background: url(../img/cloud2.png) no-repeat;
+	background-size: 90%;
+	mix-blend-mode: screen;
+	z-index: -1;
+	opacity: 0.6;
+}
+
+.mute-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 9999; 
+  font-size: 45px;
+  color: #2269FF;
+}
+
+.mute-button:focus {
+  outline: none; 
+}
+
+h3{
+	position: relative;
+	font-size: 24px !important;
+	top: 80px !important;
+	font-weight: 900;
+	background: #fff !important;
+	padding-block: 12px;
+	padding-inline: 15px;
+	border-radius: 12px;
+}
+
+@media screen and (max-width: 800px) {
+	video{
+		width: 320px;
+	}
+
+	h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 77px;
+    letter-spacing: -0.04em;
+    color: #222222;
+}
+
+#description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    margin-top: 15px;
+    width: 320px;
+    color: #222222;
+    opacity: 1;
+}
+
+nav {
+    position: relative;
+    top: -15px;
+    background: rgba(62, 62, 62, 0.1);
+    backdrop-filter: blur(4.85px);
+    border-radius: 81px;
+    padding-block: 15px;
+    padding-inline: 35px;
+    font-size: 15px;
+    margin-block: 25px;
+}
+
+.separator{
+	display: none;
+}
+
+.nav-item {
+    margin-inline: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-content {
+    background-size: cover;
+    position: relative;
+    margin: 0;
+    padding-block: 30px;
+}
+
+.right-content {
+    background-size: cover;
+    position: relative;
+    margin: 0;
+    padding-block: 30px;
+}
+
+.left-content::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -220px;
+    height: 700px;
+    width: 100%;
+    background: transparent;
+    background-size: 90%;
+    mix-blend-mode: screen;
+    z-index: -1;
+    opacity: 1;
+}
+
+.right-content::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -220px;
+    height: 700px;
+    width: 100%;
+    background: transparent;
+    background-size: 90%;
+    mix-blend-mode: screen;
+    z-index: -1;
+    opacity: 1;
+}
+h2 {
+    position: relative;
+    z-index: 1;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #2269FF;
+    mix-blend-mode: normal;
+}
+
+.row p {
+    font-family: 'Inter' font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: right;
+    letter-spacing: -0.04em;
+    width: 539px;
+    color: #222222;
+}
+
+.step-text {
+    margin: 0;
+}
+}
